@@ -16,6 +16,7 @@ import com.megaport.parser.util.EventValidator;
 /**
  * @author Romulo Rocha
  *
+ * Actual class that orchestrates the execution of all classes and steps to produce the final result
  */
 @Component
 public class Runner implements CommandLineRunner {

@@ -9,9 +9,15 @@ import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+/**
+ * @author Romulo Rocha
+ *
+ * Validates the event of sorting names and creating a new list
+ * 
+ */
+@Component
 public class EventValidatorImpl implements EventValidator {
 
 	private static Logger LOG = LoggerFactory
@@ -19,6 +25,15 @@ public class EventValidatorImpl implements EventValidator {
 	
 	private String filename;
 
+	/**
+	 * Runs several validations against the source file
+	 *   - Null and Blank not allowed too. 
+	 *   - Format of path and file name, including the extension.
+	 *   - File type. Only plan/text files are accepted.
+	 *    
+	 * @param filename - valid path and filename
+	 * @throws Exception
+	 */
 	public void validate(String filename) throws Exception {
 		this.filename = filename;
 		this.validateArguments();

@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 import com.megaport.parser.util.Constants;
 
+
+/**
+ * @author Romulo
+ *
+ * Entity used to help sorting the list of names
+ */
 public class Person{
 	
 	private String firstName;

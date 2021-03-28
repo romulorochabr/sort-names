@@ -15,12 +15,29 @@ import org.springframework.stereotype.Component;
 import com.megaport.parser.model.Person;
 import com.megaport.parser.util.Constants;
 
+/**
+ * @author Romulo Rocha
+ *
+ * Writes into a text file (UTF8) the lines from a list of persons.
+ * The final text file name is based on the source file name plus -sorted.
+ * For example: if source file is names.txt the final file is names-sorted.txt.
+ * 
+ */
 @Component
 public class PersonFileWriterImpl implements FileWriter<Person>{
 
 	private static Logger LOG = LoggerFactory
 		      .getLogger(PersonFileWriterImpl.class);
 	
+	/**
+	 * Writes the list of persons to a file.
+	 * Valid source file name with an extension should be provided.
+	 * Method transforms the source file name to the destiny file name. Refer to an example in the class javadocs.
+	 * 
+	 * @param sourceFile - valid path and filename
+	 * @return List<Person>
+	 * @throws Exception
+	 */
 	public void writeFile (final List<Person> persons, final String sourceFileName) throws Exception {
 		
 		if(persons == null || persons.size() == 0)

@@ -1,5 +1,10 @@
 package com.megaport.parser.util;
 
+/**
+ * @author Romulo Rocha
+ *
+ * Contains the constants of this application
+ */
 public final class Constants {
 
 	private Constants () {}

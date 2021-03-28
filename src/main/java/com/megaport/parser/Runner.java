@@ -13,6 +13,10 @@ import com.megaport.parser.service.FileReader;
 import com.megaport.parser.service.FileWriter;
 import com.megaport.parser.util.EventValidator;
 
+/**
+ * @author Romulo Rocha
+ *
+ */
 @Component
 public class Runner implements CommandLineRunner {
 	

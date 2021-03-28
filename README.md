@@ -13,7 +13,7 @@ Go to the folder the sole sort-names-1.0.0.jar is and execute the command below.
 ```Java
 java -jar sort-names-1.0.0.jar c:\names.txt
 ```
-## Rules
+## Rules and Validation
 There should be a valid path to a valid file of type 'plain/text'. 
 If the file name and the path are not correct then a error is going to be displayed.
 Same happens of the file type is not a text. If you try to pass a zip file, for example.
